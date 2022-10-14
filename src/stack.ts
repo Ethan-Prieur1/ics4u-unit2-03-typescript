@@ -18,27 +18,29 @@ class Stack {
   public push(pushedNumber: number): void {
     // add a number to the array
     if (isNaN(+pushedNumber)) {
-        console.log('Not a Number')
+      console.log('Not a Number')
     } else {
-        this.stackArray.push(pushedNumber)
+      this.stackArray.push(pushedNumber)
+    }
   }
 
   public pop(): void {
     // pops a number from the stack
-    if (this.stack.length == 0) {
-            console.log('Nothing to pop') 
-        } else {
-          this.stackArray.pop()
+    if (this.stackArray.length === 0) {
+      console.log('Nothing to pop')
+    } else {
+      this.stackArray.pop()
+    }
   }
-  }
+
   public peek(): void {
     // peeks a number from the stack
-    if (this.stack.length == 0) {
-        console.log('Nothing to Peek')
-        } else {
-        console.log(`The Peek is: ${this.stackArray[0]}`)
-}
-}
+    if (this.stackArray.length === 0) {
+      console.log('Nothing to Peek')
+    } else {
+      console.log(`The Peek is: ${this.stackArray[0]}`)
+    }
+  }
 }
 
 export = Stack
